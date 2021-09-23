@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Video Player</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <link rel="stylesheet" href="./task1style.css">   
+
+    </head>
+    <body>
+        <div id="container">
+            <div class="container-1st-column" >
+                 <div class="vid-player">
+                    <video src="./Video/video1.mp4"  loop autoplay muted id="vid" width="100%" height="100%"></video>
+                </div>
+                                
+                <div class="title-about">
+                    <h1 class="title" id="title">This is video one</h1>
+                    <p class="paragraph" id="paragraph">Please select the video on the <strong>right</strong> to see the description.</p>
+                </div> 
+                
+            </div>
+            <div class="container-second-column">
+                <div class="volume-bar">
+                    <div class="media-btn" id="play-pause-btn" onclick="playVideo()"><i class="fas fa-pause"></i></i></div>
+                    <div class="media-btn"><i class="fas fa-volume-up" onclick="adjustVolume(+0.1)"></i></div>
+                    <div class="media-btn" onclick="adjustVolume(-0.1)"><i class="fas fa-volume-down"></i></div>
+                    <div class="media-btn" onclick="muteVolume()"><i class="fas fa-volume-mute"></i></div>
+                    
+                </div>
+                <div class="volume-level">
+                    <h1 id="volume-level-indicator">0</h1>
+                    <div class="outer-bar">
+                        <div class="inner-bar" id="inner-bar"></div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+          
+            <div class="other-video">
+                <div class="video-selection" onclick="switchVideo(0,'./Video/video1.mp4')">
+                    <p>Video One</p>
+                    <video src="./Video/video1.mp4"  loop  muted autoplay width="50%" height="60%" id="vid-thumbnail"></video>
+                </div>
+                <div class="video-selection" >
+                    <p onclick="switchVideo(1,'./Video/video2.mp4')">Video Two</p>
+                    <video src="./Video/video2.mp4" loop muted autoplay width="50%" height="60%" id="vid-thumbnail"></video>
+                </div>
+                <div class="video-selection" >
+                    <p onclick="switchVideo(2,'./Video/video3.mp4')">Video Three</p>
+                    <video src="./Video/video3.mp4" loop muted autoplay width="50%" height="60%" id="vid-thumbnail"></video>
+                </div>
+                <div class="video-selection" >
+                    <p onclick="switchVideo(3,'./Video/video4.mp4')">Video Four</p>
+                    <video src="./Video/video4.mp4" loop muted autoplay width="50%" height="60%" id="vid-thumbnail"></video>
+                    <!-- <video src="./Video/video2.mp4" -->
+                </div>
+            </div>
+        </div>
+        <script src="./task1script.js"></script>
+    </body>
+</html>
+
+
